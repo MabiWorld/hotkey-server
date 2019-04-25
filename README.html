@@ -1,0 +1,35 @@
+<h1>Mabinogi Hotkey Server</h1>
+
+<p>For when mabiui.nexon.net is down.</p>
+
+<p>These instructions are written for Windows 10. If you're not running Windows 10, I feel bad for you.</p>
+
+<p>These instructions and this software come with no guarantee or support. Use at your own risk.</p>
+
+<h2>Setup</h2>
+
+<ol>
+<li>In the Cortana menu, search cmd</li>
+<li>Right-click Command Prompt and Run as administrator</li>
+<li>Type this in the console: <code>echo 127.0.0.1 mabiui.nexon.net &gt;&gt; C:\Windows\System32\drivers\etc\hosts</code></li>
+<li>Install the latest Python 3 release from <a href="https://www.python.org/downloads/windows/">here</a></li>
+<li>Double-click <code>hotkey-server.py</code></li>
+<li>A console window should appear that says <code>Started local hotkey server...</code> if one does not you screwed something up.</li>
+</ol>
+
+<p>The server must be running before you enter a game server in Mabinogi <em>every time</em>.</p>
+
+<h2>Tear down</h2>
+
+<p>When <code>mabiui.nexon.net</code> is back up you need to remove the entry from your hosts file that we did.</p>
+
+<ol>
+<li>In the Cortana menu, search notepad</li>
+<li>Right-click Notepad and Run as administrator</li>
+<li>Go to File -> Open and in the <code>File name</code> field at the bottom of the window, paste the path <code>C:\Windows\System32\drivers\etc\hosts</code></li>
+<li>The last line of your file will say <code>127.0.0.1 mabiui.nexon.net</code></li>
+<li>Delete that line only</li>
+<li>File -> Save</li>
+</ol>
+
+<p>You should be able to connect to the official server again.</p>
